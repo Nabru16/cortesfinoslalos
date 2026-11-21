@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta de Presentación Digital - Carnes Finas y Selectas</title>
+    
+    <!-- Tailwind CSS para un diseño moderno y responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts para una tipografía elegante -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Biblioteca para generar el código QR -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <style>
+        /* Aplicamos las fuentes personalizadas */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .font-logo {
+            font-family: 'Pacifico', cursive;
+        }
+        /* Efecto de "pulsación" para llamar la atención */
+        .pulse-effect {
+            animation: pulse 2.2s infinite;
+        }
+        /* Contorno #990000 en los íconos de los 9 botones */
+        .icon-outline-red {
+            -webkit-text-stroke: 1.5px #990000;
+            paint-order: stroke fill;
+            filter: drop-shadow(0 0 1px #990000);
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 10px 25px -5px rgba(178, 34, 34, 0.45); }
+            50% { transform: scale(1.04); box-shadow: 0 14px 30px -5px rgba(178, 34, 34, 0.7); }
+            100% { transform: scale(1); box-shadow: 0 10px 25px -5px rgba(178, 34, 34, 0.45); }
+        }
+        /* Estilos para el scrollbar del popup de delicias */
+        .delicias-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .delicias-scrollbar::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        .delicias-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #D9AAB5;
+            border-radius: 10px;
+            border: 2px solid #121212;
+        }
+    </style>
+</head>
+<body class="bg-[#121212] md:bg-[#0D0D0D] md:flex md:items-center md:justify-center min-h-screen">
+
+    <!-- Contenedor principal de la tarjeta en negro mate elegante -->
+    <div class="w-full md:max-w-sm bg-gradient-to-b from-[#1E1E1E] via-[#181818] to-[#121212] md:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.85)] text-center text-[#F8F9FA] md:rounded-3xl min-h-screen md:min-h-0 overflow-hidden md:border md:border-[#F8F9FA]/20">
+        
+        <!-- Encabezado con forma y borde -->
+        <div class="bg-[#F8F9FA] p-1" style="clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);">
+            <div class="relative overflow-hidden bg-[#181818] pb-12" style="clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);">
+                <img src="https://i.postimg.cc/j2Y9s39W/Diseno-sin-titulo-(2).png" 
+                     alt="Imagen destacada Carnes Finas y Selectas" 
+                     class="w-full h-auto object-contain block mx-auto"
+                     onerror="this.onerror=null;this.src='https://placehold.co/1000x600/181818/F8F9FA?text=Carnes+Finas+y+Selectas';">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none"></div>
+            </div>
+        </div>
+
+        <!-- Logo y Nombre con colores refinados -->
+        <div class="relative -mt-14 z-10">
+            <div class="relative w-28 h-28 mx-auto rounded-full border-4 border-[#B22222] shadow-xl">
+                <div class="w-full h-full rounded-full overflow-hidden">
+                    <img src="https://i.postimg.cc/mDqr1Phz/Diseno-sin-titulo-(1).png" 
+                         alt="Logo Carnes Finas y Selectas" 
+                         class="w-full h-full object-cover scale-105"
+                         onerror="this.onerror=null;this.src='https://placehold.co/200x200/181818/F8F9FA?text=Logo';">
+                </div>
+
+                <!-- Insignia de Verificación -->
+                <div class="absolute -bottom-1 -right-1 bg-sky-500 text-[#F8F9FA] w-7 h-7 rounded-full flex items-center justify-center border-2 border-[#F8F9FA] shadow z-10" title="Verificado">
+                    <i class="fas fa-check text-xs text-[#F8F9FA]"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenedor del resto del contenido con padding -->
+        <div class="px-6 pb-7">
+            <div class="mt-3 space-y-1">
+                <h1 class="text-lg font-bold tracking-wide text-[#F8F9FA]">Carnes Finas y Selectas</h1>
+                <p class="text-xs font-semibold uppercase tracking-widest text-[#F8F9FA]">Te da la más cordial Bienvenida</p>
+                <p class="text-xs font-medium text-[#F8F9FA] pt-0.5">Gracias por tu confianza</p>
+                <p class="text-xs text-[#F8F9FA] leading-relaxed max-w-xs mx-auto pt-1">
+                    Aquí encontrarás la mejor calidad en Carnes y un extenso surtido de Complementos para tus comidas
+                </p>
+            </div>
+            
+            <!-- Botón principal con colores actualizados -->
+            <a href="tel:+525538819873" class="inline-flex items-center justify-center bg-[#B22222] text-[#F8F9FA] font-bold py-3 px-8 rounded-full text-base mt-5 mb-4 transition-all duration-300 hover:bg-[#961c1c] hover:scale-105 transform pulse-effect shadow-lg">
+                <i class="fas fa-phone mr-2 text-[#F8F9FA]"></i>
+                Llamar para hacer pedido
+            </a>
+
+            <!-- Texto interactivo con mejor contraste -->
+            <p class="text-xs uppercase tracking-wider text-[#F8F9FA] mb-5 font-medium">Toca los íconos para interactuar</p>
+
+            <!-- Fila de Íconos de Contacto con nuevo estilo -->
+            <div class="mb-6">
+                <div class="flex justify-around items-start mb-4">
+                    <!-- Nuestros Cortes -->
+                    <div class="text-center w-20">
+                        <button id="delicias-btn" class="bg-[#C0C0C0] text-[#F8F9FA] border-2 border-[#990000] w-12 h-12 rounded-full flex items-center justify-center text-xl transition-all duration-300 hover:scale-110 hover:bg-[#B22222] hover:text-[#F8F9FA] shadow-md mx-auto" aria-label="Nuestros Cortes">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="#F8F9FA" stroke="#990000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M19.5 6.5C17.8 4.2 14.5 3.5 11.2 4.3C7.5 5.2 4.5 7.9 3.6 11.4C2.9 14.1 4.1 17.2 6.7 18.7C9.3 20.2 12.6 19.7 15.1 17.9C17.2 16.4 18.7 14.3 20.1 12.1C21.2 10.3 20.9 8.4 19.5 6.5Z"/>
+                                <circle cx="9.2" cy="11.2" r="1.7" fill="#C0C0C0" stroke="#990000" stroke-width="1.5"/>
+                                <path d="M12.5 8.5C14 9.5 15.2 11.2 15.5 13.2" fill="none" stroke="#990000" stroke-width="1.4"/>
+                            </svg>
+                        </button>
+                        <p class="text-xs mt-2 text-[#F8F9FA] font-medium leading-snug">Nuestros Cortes</p>
+                    </div>
+                    <!-- Facebook -->
+                    <div class="text-center w-20">
+                        <a href="https://www.facebook.com/p/Carnes-Finas-Y-Selectas-Lalos-61581200074820/" target="_blank" class="bg-[#C0C0C0] text-[#F8F9FA] border-2 border-[#990000] w-12 h-12 rounded-full flex items-center justify-center text-xl transition-all duration-300 hover:scale-110 hover:bg-[#B22222] hover:text-[#F8F9FA] shadow-md mx-auto" aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-[#F8F9FA] icon-outline-red"></i>
+                        </a>
+                        <p class="text-xs mt-2 text-[#F8F9FA] font-medium leading-snug">Facebook</p>
+                    </div>
+                    <!-- Instagram -->
+                    <div class="text-center w-20">
+                        <button id="complementos-btn" class="bg-[#C0C0C0] text-[#F8F9FA] border-2 border-[#990000] w-12 h-12 rounded-full flex items-center justify-center text-xl transition-all duration-300 hover:scale-110 hover:bg-[#B22222] hover:text-[#F8F9FA] shadow-md mx-auto" aria-label="Complementos y Productos">
+                            <i class="fas fa-basket-shopping text-[#F8F9FA] icon-outline-red"></i>
+                        </button>
+                        <p class="text-xs mt-2 text-[#F8F9FA] font-medium leading-snug">Complementos y Productos</p>
+                    </div>
+                </div>
+                <div class="flex justify-around items-start mb-4">
+                    <!-- WhatsApp -->
+                    <div class="text-center w-20">
+                        <a href="https://wa.me/525538819873?text=Hola%21%21%20Es%20un%20placer%20atenderte%21%21%20Estamos%20listos%20para%20tomar%20tu%20pedido..." target="_blank" class="bg-[#C0C0C0] text-[#F8F9FA] border-2 border-[#990000] w-12 h-12 rounded-full flex items-center justify-center text-xl transition-all duration-300 hover:scale-110 hover:bg-[#B22222] hover:text-[#F8F9FA] shadow-md mx-auto" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp text-[#F8F9FA] icon-outline-red"></i>
+                        </a>
+                        <p class="text-xs mt-2 text-[#F8F9FA] font-medium leading-snug">WhatsApp</p>
+                    </div>
+                    <!-- Correo Electrónico -->
+                    <div class="text-center w-20">
+                        <a href="mailto:grupocarnicero01@gmail.com" class="bg-[#C0C0C0] text-[#F8F9FA] border-2 border-[#990000] w-12 h-12 rounded-full flex items-center justify-center text-xl transition-all duration-300 hover:scale-110 hover:bg-[#B22222] hover:text-[#F8F9FA] shadow-md mx-auto" aria-label="Correo Electrónico">
+                            <i class="fas fa-envelope text-[#F8F9FA] icon-outline-red"></i>
+                        </a>
+                        <p class="text-xs mt-2 text-[#F8F9FA] font-medium leading-snug">Correo</p>
+                    </div>
+                    <!-- Ubicación -->
+                    <div class="text-center w-20">
+                        <a href="https://www.google.com/maps/search/?api=1&query=C.+Guerrero+340%2C+Tlatelolco%2C+Cuauht%C3%A9moc%2C+06900+Ciudad+de+M%C3%A9xico%2C+CDMX" target="_blank" class="bg-[#C0C0C0] text-[#F8F9FA] border-2 border-[#990000] w-12 h-12 rounded-full flex items-center justify-center text-xl transition-all duration-300 hover:scale-110 hover:bg-[#B22222] hover:text-[#F8F9FA] shadow-md mx-auto" aria-label="Ubicación">
+                            <i class="fas fa-map-marker-alt text-[#F8F9FA] icon-outline-red"></i>
+                        </a>
+                        <p class="text-xs mt-2 text-[#F8F9FA] font-medium leading-snug">Ubicación</p>
+                    </div>
+                </div>
+                <div class="flex justify-around items-start">
+                     <!-- Guardar Contacto -->
+                    <div class="text-center w-20">
+                        <a id="save-contact-btn" href="#" download="CarnesFinasYSelectas.vcf" class="bg-[#C0C0C0] text-[#F8F9FA] border-2 border-[#990000] w-12 h-12 rounded-full flex items-center justify-center text-xl transition-all duration-300 hover:scale-110 hover:bg-[#B22222] hover:text-[#F8F9FA] shadow-md mx-auto" aria-label="Guardar Contacto">
+                            <i class="fas fa-address-card text-[#F8F9FA] icon-outline-red"></i>
+                        </a>
+                        <p class="text-xs mt-2 text-[#F8F9FA] font-medium leading-snug">Guardar Contacto</p>
+                    </div>
+                    <!-- Compartir / QR -->
+                    <div class="text-center w-20">
+                        <button id="share-btn" class="bg-[#C0C0C0] text-[#F8F9FA] border-2 border-[#990000] w-12 h-12 rounded-full flex items-center justify-center text-xl transition-all duration-300 hover:scale-110 hover:bg-[#B22222] hover:text-[#F8F9FA] shadow-md mx-auto" aria-label="Compartir / QR">
+                            <i class="fas fa-qrcode text-[#F8F9FA] icon-outline-red"></i>
+                        </button>
+                        <p class="text-xs mt-2 text-[#F8F9FA] font-medium leading-snug">Código QR</p>
+                    </div>
+                    <!-- Promociones -->
+                    <div class="text-center w-20">
+                        <button id="cake-day-btn" class="bg-[#C0C0C0] text-[#F8F9FA] border-2 border-[#990000] w-12 h-12 rounded-full flex items-center justify-center text-xl transition-all duration-300 hover:scale-110 hover:bg-[#B22222] hover:text-[#F8F9FA] shadow-md mx-auto" aria-label="Promociones">
+                            <i class="fas fa-tags text-[#F8F9FA] icon-outline-red"></i>
+                        </button>
+                        <p class="text-xs mt-2 text-[#F8F9FA] font-medium leading-snug">Promociones</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" id="install-btn" class="cursor-pointer inline-flex items-center gap-1.5 text-xs text-[#F8F9FA] hover:underline transition-colors">
+                <i class="fas fa-mobile-screen-button text-[11px] text-[#F8F9FA]"></i>
+                <span>¿cómo instalar en mi dispositivo?</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Popup para Compartir / QR -->
+    <div id="share-popup" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden p-4">
+        <div class="bg-[#FBF3E4] rounded-2xl shadow-xl p-8 max-w-xs w-full text-center relative text-[#121212] border-2 border-[#B22222]">
+            <button id="close-share-popup-btn" class="absolute top-2 right-3 text-2xl text-[#181818] hover:text-[#B22222]">&times;</button>
+            <h3 class="text-xl font-semibold mb-2">Contacto en QR</h3>
+            <p class="text-xs text-[#4A4A4A] mb-3">Escanea con la cámara de tu teléfono para guardar el contacto directamente.</p>
+            <div id="qrcode-container" class="flex justify-center mb-4 p-2 bg-[#FBF3E4] rounded-xl">
+                <!-- El código QR se generará aquí -->
+            </div>
+            <p class="text-xs font-medium text-[#181818]">O copia el enlace de esta tarjeta:</p>
+            <input type="text" id="share-url" class="w-full bg-white text-center rounded-lg p-2 mt-2 border border-[#B22222]/50 text-xs cursor-pointer" readonly>
+            <p id="copy-feedback" class="text-xs text-[#B22222] font-semibold mt-1.5 hidden">¡Enlace copiado al portapapeles!</p>
+        </div>
+    </div>
+    <!-- Popup para Nuestros Cortes -->
+    <div id="delicias-popup" class="fixed inset-0 bg-gradient-to-b from-[#1E1E1E] to-[#121212] z-50 hidden p-4 text-[#F8F9FA]">
+        <div class="w-full h-full max-w-lg mx-auto relative">
+            <button id="close-delicias-popup-btn" class="absolute top-2 right-2 text-3xl text-[#F8F9FA] hover:text-[#B22222] z-10">&times;</button>
+            <div class="h-full overflow-y-auto delicias-scrollbar pr-2">
+                <div class="text-center pt-8 pb-12">
+                    <span class="inline-block text-[11px] uppercase tracking-widest text-[#F8F9FA] bg-[#B22222] px-3 py-1 rounded-full font-semibold mb-2">Calidad Selecta</span>
+                    <h2 class="text-3xl font-bold mb-2 text-[#F8F9FA]">Nuestros Cortes</h2>
+                    <p class="text-sm text-[#F8F9FA]/85 max-w-md mx-auto">Frescura, sabor y calidad selecta listos para la parrilla, el sartén o tu cocina.</p>
+                    
+                    <div class="mt-8 space-y-4">
+                        <!-- 1: Arrachera Marinada (carne cruda marinada) -->
+                        <div class="bg-[#F8F9FA]/5 border border-[#990000]/60 rounded-2xl p-4 text-left flex flex-col md:flex-row items-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1603048297172-c92544798d5a?q=80&w=800&auto=format&fit=crop" alt="Arrachera Marinada Cruda" class="w-full md:w-36 h-36 rounded-xl object-cover shadow-lg border border-[#990000]/40" onerror="this.onerror=null;this.src='https://placehold.co/800x800/181818/F8F9FA?text=Arrachera+Cruda';">
+                            <div>
+                                <span class="text-[11px] uppercase tracking-wider text-[#B22222] font-bold">Favorita del Asador</span>
+                                <h3 class="font-bold text-xl text-[#F8F9FA]">Arrachera Marinada</h3>
+                                <p class="text-[#F8F9FA]/85 mt-1 text-sm leading-relaxed">Suave, jugosa y sazonada con nuestra receta especial, lista para llevar directo al asador o sartén.</p>
+                            </div>
+                        </div>
+
+                        <!-- 2: Milanesa de Res Preparada (bistec/milanesa fresca cruda) -->
+                        <div class="bg-[#F8F9FA]/5 border border-[#990000]/60 rounded-2xl p-4 text-left flex flex-col md:flex-row items-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?q=80&w=800&auto=format&fit=crop" alt="Milanesa de Res Fresca" class="w-full md:w-36 h-36 rounded-xl object-cover shadow-lg border border-[#990000]/40" onerror="this.onerror=null;this.src='https://placehold.co/800x800/181818/F8F9FA?text=Milanesa+Fresca';">
+                            <div>
+                                <span class="text-[11px] uppercase tracking-wider text-[#B22222] font-bold">Lista para Freír</span>
+                                <h3 class="font-bold text-xl text-[#F8F9FA]">Milanesa de Res Preparada</h3>
+                                <p class="text-[#F8F9FA]/85 mt-1 text-sm leading-relaxed">Corte delgado y tierno de res, sazonado y empanizado al momento para quedar dorado y crujiente.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 3: Chistorra (embutido fresco sin cocinar) -->
+                        <div class="bg-[#F8F9FA]/5 border border-[#990000]/60 rounded-2xl p-4 text-left flex flex-col md:flex-row items-center gap-4">
+                           <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?q=80&w=800&auto=format&fit=crop" alt="Chistorra Fresca" class="w-full md:w-36 h-36 rounded-xl object-cover shadow-lg border border-[#990000]/40" onerror="this.onerror=null;this.src='https://placehold.co/800x800/181818/F8F9FA?text=Chistorra+Fresca';">
+                           <div>
+                               <span class="text-[11px] uppercase tracking-wider text-[#B22222] font-bold">Toque Español</span>
+                               <h3 class="font-bold text-xl text-[#F8F9FA]">Chistorra</h3>
+                               <p class="text-[#F8F9FA]/85 mt-1 text-sm leading-relaxed">Embutido curado condimentado con pimentón y ajo, ideal para botana o entrada al carbón.</p>
+                           </div>
+                        </div>
+
+                        <!-- 4: Chorizo Argentino (embutido crudo) -->
+                        <div class="bg-[#F8F9FA]/5 border border-[#990000]/60 rounded-2xl p-4 text-left flex flex-col md:flex-row items-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1588168333986-5078d3ae3976?q=80&w=800&auto=format&fit=crop" alt="Chorizo Argentino Crudo" class="w-full md:w-36 h-36 rounded-xl object-cover shadow-lg border border-[#990000]/40" onerror="this.onerror=null;this.src='https://placehold.co/800x800/181818/F8F9FA?text=Chorizo+Argentino';">
+                            <div>
+                                <span class="text-[11px] uppercase tracking-wider text-[#B22222] font-bold">Parrillero Clásico</span>
+                                <h3 class="font-bold text-xl text-[#F8F9FA]">Chorizo Argentino</h3>
+                                <p class="text-[#F8F9FA]/85 mt-1 text-sm leading-relaxed">Jugoso y lleno de sabor con especias tradicionales, perfecto para choripán o parrilladas.</p>
+                            </div>
+                        </div>
+
+                        <!-- 5: Salmón (filete de salmón fresco crudo) -->
+                        <div class="bg-[#F8F9FA]/5 border border-[#990000]/60 rounded-2xl p-4 text-left flex flex-col md:flex-row items-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?q=80&w=800&auto=format&fit=crop" alt="Salmón Fresco Crudo" class="w-full md:w-36 h-36 rounded-xl object-cover shadow-lg border border-[#990000]/40" onerror="this.onerror=null;this.src='https://placehold.co/800x800/181818/F8F9FA?text=Salmon+Fresco';">
+                            <div>
+                                <span class="text-[11px] uppercase tracking-wider text-[#B22222] font-bold">Frescura del Mar</span>
+                                <h3 class="font-bold text-xl text-[#F8F9FA]">Salmón</h3>
+                                <p class="text-[#F8F9FA]/85 mt-1 text-sm leading-relaxed">Lomo fresco de textura suave y gran sabor, excelente para preparar a la plancha, al horno o parrilla.</p>
+                            </div>
+                        </div>
+
+                        <!-- 6: Sirloin (corte crudo fresco) -->
+                        <div class="bg-[#F8F9FA]/5 border border-[#990000]/60 rounded-2xl p-4 text-left flex flex-col md:flex-row items-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?q=80&w=800&auto=format&fit=crop" alt="Sirloin Crudo" class="w-full md:w-36 h-36 rounded-xl object-cover shadow-lg border border-[#990000]/40" onerror="this.onerror=null;this.src='https://placehold.co/800x800/181818/F8F9FA?text=Sirloin+Fresco';">
+                            <div>
+                                <span class="text-[11px] uppercase tracking-wider text-[#B22222] font-bold">Corte Magro</span>
+                                <h3 class="font-bold text-xl text-[#F8F9FA]">Sirloin</h3>
+                                <p class="text-[#F8F9FA]/85 mt-1 text-sm leading-relaxed">Corte limpio, suave y con bajo contenido de grasa, muy versátil para asar o filetear.</p>
+                            </div>
+                        </div>
+
+                        <!-- 7: Cortes Americanos (cortes crudos marmoleados de carnicería) -->
+                        <div class="bg-[#F8F9FA]/5 border border-[#990000]/60 rounded-2xl p-4 text-left flex flex-col md:flex-row items-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1551028150-64b9f398f678?q=80&w=800&auto=format&fit=crop" alt="Cortes Americanos Crudos" class="w-full md:w-36 h-36 rounded-xl object-cover shadow-lg border border-[#990000]/40" onerror="this.onerror=null;this.src='https://placehold.co/800x800/181818/F8F9FA?text=Cortes+Americanos';">
+                            <div>
+                                <span class="text-[11px] uppercase tracking-wider text-[#B22222] font-bold">Calidad Premium</span>
+                                <h3 class="font-bold text-xl text-[#F8F9FA]">Cortes Americanos</h3>
+                                <p class="text-[#F8F9FA]/85 mt-1 text-sm leading-relaxed">Selección especial de Ribeye, New York, T-Bone y Tomahawk con excelente marmoleo y jugosidad.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="https://wa.me/525538819873?text=¡Hola!%20Me%20gustaría%20hacer%20un%20pedido%20de%20cortes%20de%20carne." target="_blank" class="inline-flex items-center justify-center bg-[#B22222] text-[#F8F9FA] font-bold py-3 px-8 rounded-full text-sm transition-all duration-300 hover:bg-[#961c1c] hover:scale-105 transform shadow-lg">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            Pedir Cortes por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup para Promociones -->
+    <div id="cake-day-popup" class="fixed inset-0 bg-gradient-to-b from-[#1E1E1E] to-[#121212] z-50 hidden p-4 text-[#F8F9FA]">
+        <div class="w-full h-full max-w-lg mx-auto relative">
+            <button id="close-cake-day-popup-btn" class="absolute top-2 right-2 text-3xl text-[#F8F9FA] hover:text-[#B22222] z-10">&times;</button>
+            <div class="h-full overflow-y-auto delicias-scrollbar pr-2">
+                <div class="text-center pt-8 pb-12">
+                    <span class="inline-block text-[11px] uppercase tracking-widest text-[#F8F9FA] bg-[#B22222] px-3 py-1 rounded-full font-semibold mb-2">Ofertas Especiales</span>
+                    <h2 class="text-2xl font-bold mb-2 text-[#F8F9FA]">Promociones</h2>
+                    <p class="text-sm text-[#F8F9FA]/85 max-w-md mx-auto">Aprovecha nuestras promociones especiales de la semana en cortes selectos y complementos.</p>
+                    
+                    <div class="mt-8 space-y-4 text-left">
+                        <div class="bg-[#F8F9FA]/5 border border-[#990000]/60 rounded-2xl p-4">
+                            <span class="text-[11px] uppercase tracking-wider text-[#B22222] font-bold">Combo Fin de Semana</span>
+                            <h3 class="font-bold text-lg text-[#F8F9FA] mt-0.5">Promo Parrillera</h3>
+                            <p class="text-xs text-[#F8F9FA]/80 mt-1">En la compra de 2 kg o más de cortes selectos (Ribeye, New York o Arrachera), llévate gratis una salsa artesanal o paquete de tortillas de harina.</p>
+                        </div>
+
+                        <div class="bg-[#F8F9FA]/5 border border-[#990000]/60 rounded-2xl p-4">
+                            <span class="text-[11px] uppercase tracking-wider text-[#B22222] font-bold">Precio Especial por Kilo</span>
+                            <h3 class="font-bold text-lg text-[#F8F9FA] mt-0.5">Martes y Jueves de Arrachera</h3>
+                            <p class="text-xs text-[#F8F9FA]/80 mt-1">Descuento especial por kilogramo en nuestra Arrachera Marinada de la casa lista para el asador.</p>
+                        </div>
+
+                        <div class="bg-[#F8F9FA]/5 border border-[#990000]/60 rounded-2xl p-4">
+                            <span class="text-[11px] uppercase tracking-wider text-[#B22222] font-bold">Clientes Frecuentes</span>
+                            <h3 class="font-bold text-lg text-[#F8F9FA] mt-0.5">Pedidos por Mayoreo y Eventos</h3>
+                            <p class="text-xs text-[#F8F9FA]/80 mt-1">Cotización preferencial en pedidos mayores a 5 kg para reuniones familiares y eventos especiales.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="https://wa.me/525538819873?text=¡Hola!%20Me%20interesa%20conocer%20las%20Promociones%20vigentes." target="_blank" class="inline-flex items-center justify-center bg-[#B22222] text-[#F8F9FA] font-bold py-3 px-8 rounded-full text-sm transition-all duration-300 hover:bg-[#961c1c] hover:scale-105 transform shadow-lg">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            Aprovechar Promoción por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup para Instalación en Dispositivo -->
+    <div id="install-popup" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden p-4">
+        <div class="bg-[#FBF3E4] rounded-2xl shadow-xl p-6 max-w-xs w-full text-left relative text-[#121212] border-2 border-[#B22222]">
+            <button id="close-install-popup-btn" class="absolute top-2 right-3 text-2xl text-[#181818] hover:text-[#B22222]">&times;</button>
+            <h3 class="text-lg font-bold mb-3 text-center text-[#181818]">Instalar Tarjeta Digital</h3>
+            <div class="space-y-3 text-xs text-[#242424]">
+                <div class="bg-white/80 p-3 rounded-xl border border-[#B22222]/20">
+                    <p class="font-bold text-[#B22222] mb-1"><i class="fab fa-apple mr-1"></i> En iPhone (Safari):</p>
+                    <p>Toca el ícono de <strong>Compartir</strong> (cuadro con flecha hacia arriba) y selecciona <strong>"Agregar a inicio"</strong>.</p>
+                </div>
+                <div class="bg-white/80 p-3 rounded-xl border border-[#B22222]/20">
+                    <p class="font-bold text-[#B22222] mb-1"><i class="fab fa-android mr-1"></i> En Android (Chrome):</p>
+                    <p>Toca los <strong>tres puntos</strong> en la esquina superior derecha y selecciona <strong>"Agregar a la pantalla principal"</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup para Complementos y Productos -->
+    <div id="complementos-popup" class="fixed inset-0 bg-gradient-to-b from-[#1E1E1E] to-[#121212] z-50 hidden p-4 text-[#F8F9FA]">
+        <div class="w-full h-full max-w-lg mx-auto relative">
+            <button id="close-complementos-popup-btn" class="absolute top-2 right-2 text-3xl text-[#F8F9FA] hover:text-[#B22222] z-10">&times;</button>
+            <div class="h-full overflow-y-auto delicias-scrollbar pr-2">
+                <div class="text-center pt-8 pb-12">
+                    <span class="inline-block text-[11px] uppercase tracking-widest text-[#F8F9FA] bg-[#B22222] px-3 py-1 rounded-full font-semibold mb-2">Todo para tu comida</span>
+                    <h2 class="text-2xl font-bold mb-2 text-[#F8F9FA]">Complementos y Productos</h2>
+                    <p class="text-sm text-[#F8F9FA]/85 max-w-md mx-auto">Acompaña tus cortes con nuestro extenso surtido de abarrotes, salsas, sazonadores y quesos.</p>
+                    
+                    <div class="mt-8 space-y-4 text-left">
+                        <!-- Categoría 1: Salsas, Adobos y Sazonadores -->
+                        <div class="bg-[#F8F9FA]/5 border border-[#990000]/60 rounded-2xl overflow-hidden transition-all">
+                            <button type="button" onclick="toggleComplementoDetalle('detalle-salsas', 'chevron-salsas')" class="w-full p-4 flex items-center justify-between gap-3 text-left hover:bg-[#F8F9FA]/5 transition-colors">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-full bg-[#C0C0C0] border-2 border-[#990000] flex items-center justify-center shrink-0">
+                                        <i class="fas fa-pepper-hot text-lg text-[#F8F9FA] icon-outline-red"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-base text-[#F8F9FA]">Salsas, Adobos y Sazonadores</h3>
+                                        <p class="text-xs text-[#F8F9FA]/80 mt-0.5">Toca para ver variedades disponibles</p>
+                                    </div>
+                                </div>
+                                <i id="chevron-salsas" class="fas fa-chevron-down text-sm text-[#F8F9FA]/80 transition-transform duration-300"></i>
+                            </button>
+                            <div id="detalle-salsas" class="hidden px-4 pb-4 pt-1 border-t border-[#990000]/30 bg-black/25">
+                                <ul class="space-y-1.5 text-xs text-[#F8F9FA]/90 mt-2">
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#B22222]"></span>Salsa Macha Artesanal (cacahuate y semillas)</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#B22222]"></span>Salsa de Habanero Tatemado &amp; Salsa Verde Asada</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#B22222]"></span>Chimichurri Argentino Tradicional</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#B22222]"></span>Adobo Pastor, Adobo de Tres Chiles y Marinado Especial</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#B22222]"></span>Sal en Grano Ahumada, Pimienta Negra y Rub Parrillero</li>
+                                </ul>
+                                <a href="https://wa.me/525538819873?text=¡Hola!%20Me%20interesan%20Salsas,%20Adobos%20y%20Sazonadores." target="_blank" class="inline-flex items-center gap-1.5 mt-3 text-xs font-semibold text-[#F8F9FA] bg-[#B22222] hover:bg-[#961c1c] px-3.5 py-1.5 rounded-full transition-colors">
+                                    <i class="fab fa-whatsapp"></i> Pedir esta opción
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Categoría 2: Quesos, Salchichas y Chorizos -->
+                        <div class="bg-[#F8F9FA]/5 border border-[#990000]/60 rounded-2xl overflow-hidden transition-all">
+                            <button type="button" onclick="toggleComplementoDetalle('detalle-quesos', 'chevron-quesos')" class="w-full p-4 flex items-center justify-between gap-3 text-left hover:bg-[#F8F9FA]/5 transition-colors">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-full bg-[#C0C0C0] border-2 border-[#990000] flex items-center justify-center shrink-0">
+                                        <i class="fas fa-cheese text-lg text-[#F8F9FA] icon-outline-red"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-base text-[#F8F9FA]">Quesos, Salchichas y Chorizos</h3>
+                                        <p class="text-xs text-[#F8F9FA]/80 mt-0.5">Toca para ver tipos de quesos y embutidos</p>
+                                    </div>
+                                </div>
+                                <i id="chevron-quesos" class="fas fa-chevron-down text-sm text-[#F8F9FA]/80 transition-transform duration-300"></i>
+                            </button>
+                            <div id="detalle-quesos" class="hidden px-4 pb-4 pt-1 border-t border-[#990000]/30 bg-black/25">
+                                <ul class="space-y-1.5 text-xs text-[#F8F9FA]/90 mt-2">
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#B22222]"></span>Queso Oaxaca Artesanal de Hebra</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#B22222]"></span>Queso Manchego, Gouda y Chihuahua para Fundir</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#B22222]"></span>Queso Panela Fresco y Provolone para Asar</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#B22222]"></span>Chistorra Española y Chorizo Argentino</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#B22222]"></span>Salchicha Parrillera Polaca y Ranchera</li>
+                                </ul>
+                                <a href="https://wa.me/525538819873?text=¡Hola!%20Me%20interesan%20Quesos,%20Salchichas%20y%20Chorizos." target="_blank" class="inline-flex items-center gap-1.5 mt-3 text-xs font-semibold text-[#F8F9FA] bg-[#B22222] hover:bg-[#961c1c] px-3.5 py-1.5 rounded-full transition-colors">
+                                    <i class="fab fa-whatsapp"></i> Pedir esta opción
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Categoría 3: Paquete de tortillas -->
+                        <div class="bg-[#F8F9FA]/5 border border-[#990000]/60 rounded-2xl overflow-hidden transition-all">
+                            <button type="button" onclick="toggleComplementoDetalle('detalle-tortillas', 'chevron-tortillas')" class="w-full p-4 flex items-center justify-between gap-3 text-left hover:bg-[#F8F9FA]/5 transition-colors">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-full bg-[#C0C0C0] border-2 border-[#990000] flex items-center justify-center shrink-0">
+                                        <i class="fas fa-bread-slice text-lg text-[#F8F9FA] icon-outline-red"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-base text-[#F8F9FA]">Paquete de tortillas</h3>
+                                        <p class="text-xs text-[#F8F9FA]/80 mt-0.5">Tortillas de harina de diferentes sabores (toca para ver)</p>
+                                    </div>
+                                </div>
+                                <i id="chevron-tortillas" class="fas fa-chevron-down text-sm text-[#F8F9FA]/80 transition-transform duration-300"></i>
+                            </button>
+                            <div id="detalle-tortillas" class="hidden px-4 pb-4 pt-1 border-t border-[#990000]/30 bg-black/25">
+                                <ul class="space-y-1.5 text-xs text-[#F8F9FA]/90 mt-2">
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#B22222]"></span>Tortillas de Harina Tradicionales (caseras y taqueras)</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#B22222]"></span>Tortillas de Harina con Chipotle</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#B22222]"></span>Tortillas de Harina con Ajo y Finas Hierbas</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#B22222]"></span>Tortillas de Harina de Espinaca y Nopal</li>
+                                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#B22222]"></span>Tortillas de Harina Integrales y de Mantequilla</li>
+                                </ul>
+                                <a href="https://wa.me/525538819873?text=¡Hola!%20Me%20interesan%20los%20Paquetes%20de%20tortillas%20de%20harina." target="_blank" class="inline-flex items-center gap-1.5 mt-3 text-xs font-semibold text-[#F8F9FA] bg-[#B22222] hover:bg-[#961c1c] px-3.5 py-1.5 rounded-full transition-colors">
+                                    <i class="fab fa-whatsapp"></i> Pedir esta opción
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="https://wa.me/525538819873?text=¡Hola!%20Me%20gustaría%20pedir%20complementos%20y%20productos." target="_blank" class="inline-flex items-center justify-center bg-[#B22222] text-[#F8F9FA] font-bold py-3 px-8 rounded-full text-sm transition-all duration-300 hover:bg-[#961c1c] hover:scale-105 transform shadow-lg">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            Pedir Complementos por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Datos del Contacto (vCard completa para descarga .vcf) ---
+        const vCardData = [
+            'BEGIN:VCARD',
+            'VERSION:3.0',
+            'N:Selectas;Carnes Finas y;;;',
+            'FN:Carnes Finas y Selectas',
+            'ORG:Carnes Finas y Selectas',
+            'TITLE:Carnes Finas y Complementos',
+            'TEL;TYPE=CELL,VOICE:+525538819873',
+            'EMAIL;TYPE=INTERNET:grupocarnicero01@gmail.com',
+            'ADR;TYPE=WORK:;;C. Guerrero 340, Tlatelolco, Cuauhtémoc;Ciudad de México;CDMX;06900;México',
+            'NOTE:Aquí encontrarás la mejor calidad en Carnes y un extenso surtido de Complementos para tus comidas.',
+            'END:VCARD'
+        ].join('\r\n');
+
+        // --- Versión compacta ASCII para el QR (evita code length overflow y facilita el escaneo) ---
+        const qrVCardData = [
+            'BEGIN:VCARD',
+            'VERSION:3.0',
+            'N:Selectas;Carnes Finas y;;;',
+            'FN:Carnes Finas y Selectas',
+            'ORG:Carnes Finas y Selectas',
+            'TEL;TYPE=CELL:+525538819873',
+            'EMAIL:grupocarnicero01@gmail.com',
+            'ADR:;;C. Guerrero 340, Tlatelolco;CDMX;;06900;Mexico',
+            'END:VCARD'
+        ].join('\n');
+
+        // --- Lógica para el Popup de Compartir / QR ---
+        const shareBtn = document.getElementById('share-btn');
+        const sharePopup = document.getElementById('share-popup');
+        const closeSharePopupBtn = document.getElementById('close-share-popup-btn');
+        const qrcodeContainer = document.getElementById('qrcode-container');
+        const shareUrlInput = document.getElementById('share-url');
+        const copyFeedback = document.getElementById('copy-feedback');
+        let qrcode = null;
+
+        shareBtn.addEventListener('click', () => {
+            const url = window.location.href;
+            shareUrlInput.value = url;
+            copyFeedback.classList.add('hidden');
+            shareUrlInput.onclick = () => {
+                shareUrlInput.select();
+                const showCopied = () => {
+                    copyFeedback.classList.remove('hidden');
+                };
+                try {
+                    document.execCommand('copy');
+                    showCopied();
+                } catch (err) {
+                    console.error('Fallback copy error:', err);
+                }
+            };
+            qrcodeContainer.innerHTML = '';
+            try {
+                qrcode = new QRCode(qrcodeContainer, {
+                    text: qrVCardData,
+                    width: 190,
+                    height: 190,
+                    colorDark : "#121212",
+                    colorLight : "#FBF3E4",
+                    correctLevel : QRCode.CorrectLevel.L
+                });
+            } catch (err) {
+                console.error('Error al generar QR:', err);
+            }
+            sharePopup.classList.remove('hidden');
+        });
+
+        function closeSharePopup() {
+            sharePopup.classList.add('hidden');
+        }
+        closeSharePopupBtn.addEventListener('click', closeSharePopup);
+        sharePopup.addEventListener('click', (event) => {
+            if (event.target === sharePopup) closeSharePopup();
+        });
+
+        // --- Lógica para el Popup de Nuestras Delicias ---
+        const deliciasBtn = document.getElementById('delicias-btn');
+        const deliciasPopup = document.getElementById('delicias-popup');
+        const closeDeliciasPopupBtn = document.getElementById('close-delicias-popup-btn');
+
+        deliciasBtn.addEventListener('click', () => {
+            deliciasPopup.classList.remove('hidden');
+        });
+
+        function closeDeliciasPopup() {
+            deliciasPopup.classList.add('hidden');
+        }
+        closeDeliciasPopupBtn.addEventListener('click', closeDeliciasPopup);
+        deliciasPopup.addEventListener('click', (event) => {
+            if (event.target === deliciasPopup) closeDeliciasPopup();
+        });
+
+        // --- Lógica para Guardar Contacto ---
+        const saveContactBtn = document.getElementById('save-contact-btn');
+        saveContactBtn.href = `data:text/vcard;charset=utf-8,${encodeURIComponent(vCardData)}`;
+
+        // --- Lógica para el Popup de Instalación ---
+        const installBtn = document.getElementById('install-btn');
+        const installPopup = document.getElementById('install-popup');
+        const closeInstallPopupBtn = document.getElementById('close-install-popup-btn');
+
+        if (installBtn && installPopup) {
+            installBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                installPopup.classList.remove('hidden');
+            });
+        }
+
+        function closeInstallPopup() {
+            if (installPopup) installPopup.classList.add('hidden');
+        }
+        if (closeInstallPopupBtn) {
+            closeInstallPopupBtn.addEventListener('click', closeInstallPopup);
+        }
+        if (installPopup) {
+            installPopup.addEventListener('click', (event) => {
+                if (event.target === installPopup) closeInstallPopup();
+            });
+        }
+        
+        // --- Lógica para el Popup de Paquetes / Asados ---
+        const cakeDayBtn = document.getElementById('cake-day-btn');
+        const cakeDayPopup = document.getElementById('cake-day-popup');
+        const closeCakeDayPopupBtn = document.getElementById('close-cake-day-popup-btn');
+
+        if (cakeDayBtn && cakeDayPopup) {
+            cakeDayBtn.addEventListener('click', () => {
+                cakeDayPopup.classList.remove('hidden');
+            });
+        }
+
+        function closeCakeDayPopup() {
+            if (cakeDayPopup) cakeDayPopup.classList.add('hidden');
+        }
+        if (closeCakeDayPopupBtn) {
+            closeCakeDayPopupBtn.addEventListener('click', closeCakeDayPopup);
+        }
+        if (cakeDayPopup) {
+            cakeDayPopup.addEventListener('click', (event) => {
+                if (event.target === cakeDayPopup) closeCakeDayPopup();
+            });
+        }
+
+        // --- Lógica para el Popup de Complementos y Productos ---
+        const complementosBtn = document.getElementById('complementos-btn');
+        const complementosPopup = document.getElementById('complementos-popup');
+        const closeComplementosPopupBtn = document.getElementById('close-complementos-popup-btn');
+
+        complementosBtn.addEventListener('click', () => {
+            complementosPopup.classList.remove('hidden');
+        });
+
+        function closeComplementosPopup() {
+            complementosPopup.classList.add('hidden');
+        }
+        closeComplementosPopupBtn.addEventListener('click', closeComplementosPopup);
+        complementosPopup.addEventListener('click', (event) => {
+            if (event.target === complementosPopup) closeComplementosPopup();
+        });
+
+        // --- Desplegable de opciones dentro de Complementos y Productos ---
+        function toggleComplementoDetalle(detailId, chevronId) {
+            const detailEl = document.getElementById(detailId);
+            const chevronEl = document.getElementById(chevronId);
+            if (!detailEl) return;
+            const isHidden = detailEl.classList.contains('hidden');
+            detailEl.classList.toggle('hidden');
+            if (chevronEl) {
+                chevronEl.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+            }
+        }
+    </script>
+</body>
+</html>
